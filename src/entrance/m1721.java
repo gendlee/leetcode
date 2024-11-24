@@ -1,6 +1,10 @@
-package linkedlist;
+package entrance;
 
+import common.linkedlist.LinkedList;
+import common.linkedlist.ListNode;
 import utils.Printer;
+
+
 
 public class m1721 {
     int midIndex = 1;
@@ -39,8 +43,8 @@ public class m1721 {
 
         // 交换节点值
         int tmp = cur1.val;
-        cur1.setVal(cur2.val);
-        cur2.setVal(tmp);
+        cur1.val = cur2.val;
+        cur2.val = tmp;
 
         // 再反转第二条链表
         secondHead = reverseList(secondHead);
@@ -94,7 +98,7 @@ public class m1721 {
 
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList(1, 20);
-        ListNode head = linkedList.getHead();
+        ListNode head = linkedList.head;
 
         Printer.printLinkedList(head);
 
